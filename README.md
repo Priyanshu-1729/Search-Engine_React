@@ -1,3 +1,10 @@
+##About the App
+This app has a feature of searching between a list of acticle links given in the form of JSON array. 
+
+##Main Features of the app
+The app shows the filtered list of article links when the user gives the input in the search bar.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
