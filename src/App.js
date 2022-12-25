@@ -5,21 +5,21 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Item from "./Item";
 import Switch from '@mui/material/Switch';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Bookmarked from "./Bookmarked";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import FormGroup from '@mui/material/FormGroup';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Bookmarked from "./Bookmarked";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 import { Button } from "@mui/material";
 
 
@@ -123,7 +123,7 @@ function App() {
   
   var num = 1;
   const toggleMode = () => {
-    if (mode == "light") {
+    if (mode==="light") {
       setMode("dark")
       document.body.style.backgroundColor = 'white';
     }
@@ -134,7 +134,7 @@ function App() {
   }
   return (
     <>
-         { (flag==0) &&
+         { (flag===0) &&
 
             <div>
 
@@ -159,7 +159,7 @@ function App() {
                       component="div"
                       sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                      {(mode == "light") ? "Light Mode" : "Dark Mode"}
+                      {(mode==="light") ? "Light Mode" : "Dark Mode"}
                     </Typography>
 
 
@@ -190,7 +190,7 @@ function App() {
 
                 {JSONDATA.links
                   .filter((val) => {
-                    if (query == "") {
+                    if (query==="") {
                       return "Hello"
                     } else if (val.toLowerCase().includes(query.toLowerCase())) {
                       return "Hello";
@@ -210,7 +210,7 @@ function App() {
 
 
     }
-    {(flag==1) &&
+    {(flag===1) &&
 
          <div style={{ margin: "0 0 0 0" }}>
           <Box sx={{ flexGrow: 1 }}>
@@ -233,7 +233,7 @@ function App() {
                       component="div"
                       sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                      {(mode == "light") ? "Light Mode" : "Dark Mode"}
+                      {(mode==="light") ? "Light Mode" : "Dark Mode"}
                     </Typography>
 
 

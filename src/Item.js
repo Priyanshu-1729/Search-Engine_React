@@ -29,29 +29,23 @@ export default function Item({ val, key, num, mode,list ,setList}) {
         // <Alert severity="success">Url Copied</Alert>
     }
     const [show, setShow] = React.useState(0);
-    const showUrl = () => {
-        if (show)
-            setShow(0);
-        else
-            setShow(1);
 
-    }
     const card = (
         <React.Fragment>
-            <CardContent background={(mode == "light") ? "white" : "#302e2e"}>
-                <Typography sx={{ fontSize: 25, fontWeight: "900", color: (mode == "light") ? "white" : "black" }}  >
+            <CardContent background={(mode === "light") ? "white" : "#302e2e"}>
+                <Typography sx={{ fontSize: 25, fontWeight: "900", color: (mode === "light") ? "white" : "black" }}  >
                     Item no {num}
                 </Typography>
-                <Typography sx={{ color: (mode == "light") ? "white" : "black" }}>
+                <Typography sx={{ color: (mode === "light") ? "white" : "black" }}>
 
                     {(show) ? val : val.substring(0, 100)}
                 </Typography>
                 {/* <h3 href={val}>{(val.length <= 50) ? val : val.substring(0, 100) + "..."}</h3> */}
             </CardContent>
             <CardActions>
-                <Button size="large" href={val} target="_blank" sx={{ color: (mode == "dark") ? "black" : "white" }}>Vist URL</Button>
-                <Button size="large" onClick={copyText} sx={{ color: (mode == "dark") ? "black" : "white" }}>Copy URL</Button>
-                <Button size="large" onClick={bookmarkUrl} sx={{ color: (mode == "dark") ? "black" : "white" }}>Bookmark URL</Button>
+                <Button size="large" href={val} target="_blank" sx={{ color: (mode === "dark") ? "black" : "white" }}>Vist URL</Button>
+                <Button size="large" onClick={copyText} sx={{ color: (mode === "dark") ? "black" : "white" }}>Copy URL</Button>
+                <Button size="large" onClick={bookmarkUrl} sx={{ color: (mode === "dark") ? "black" : "white" }}>Bookmark URL</Button>
 
             </CardActions>
         </React.Fragment>
@@ -63,7 +57,7 @@ export default function Item({ val, key, num, mode,list ,setList}) {
             <div style={{ display: "flex", flexDirection: "row" }}>
 
                 <Box sx={{ width: "40vw", margin: "20px", flexDirection: "row" }}>
-                    <Card variant="outlined" sx={{ background: (mode == "dark") ? "white" : "grey" }}>{card} </Card>
+                    <Card variant="outlined" sx={{ background: (mode === "dark") ? "white" : "grey" }}>{card} </Card>
                 </Box>
 
                 {(copy) ? <Stack sx={{ width: 'auto', margin: "5px 0 0 0" }} spacing={2}>
